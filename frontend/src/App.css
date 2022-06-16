@@ -1,0 +1,229 @@
+body {
+  background-color: rgb(33, 33, 33);
+}
+
+.form {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .form {
+    max-width: 960px;
+  }
+}
+
+.header {
+  color: white;
+}
+
+.options {
+  background-color: aliceblue;
+  border-radius: 1rem;
+  padding: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.option {
+  flex: 50%;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.option input {
+  margin: 0 5px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.file {
+  display: flex;
+}
+
+.responsiveBtn {
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  width: 20%;
+  font-size: larger;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.responsiveBtn:hover {
+  border: 1px solid gray;
+}
+
+#greenBorder {
+  border: 1px solid green;
+}
+
+#greenBorder:hover {
+  border: 1px solid rgb(0, 208, 0);
+}
+
+.selectedFile {
+  color: white;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  align-self: center;
+  margin: 0 10px;
+  font-size: large;
+}
+
+.error {
+  color: red;
+  align-self: center;
+  margin: 0 10px;
+  font-size: large;
+}
+
+.description {
+  color: white;
+  font-size: large;
+}
+
+.loader {
+  font-size: 10px;
+  margin: 0 auto;
+  text-indent: -9999em;
+  border-radius: 50%;
+  background: #969696;
+  background: -moz-linear-gradient(
+    left,
+    #969696 10%,
+    rgba(150, 150, 150, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #969696 10%,
+    rgba(150, 150, 150, 0) 42%
+  );
+  background: -o-linear-gradient(left, #969696 10%, rgba(150, 150, 150, 0) 42%);
+  background: -ms-linear-gradient(
+    left,
+    #969696 10%,
+    rgba(150, 150, 150, 0) 42%
+  );
+  background: linear-gradient(
+    to right,
+    #969696 10%,
+    rgba(150, 150, 150, 0) 42%
+  );
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #969696;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.loader:after {
+  background: #ffffff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  width: 70%;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  left: 15%;
+  top: 30%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+@media (min-width: 600px) {
+  .modal {
+    width: 500px;
+    left: calc(50% - 250px);
+  }
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#cancelDownload {
+  color: black;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid black;
+  font-size: smaller;
+}
+
+#cancelDownload:hover {
+  border: 1px solid grey;
+}
+
+.downloadModal {
+  padding: 20px;
+  font-size: large;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
